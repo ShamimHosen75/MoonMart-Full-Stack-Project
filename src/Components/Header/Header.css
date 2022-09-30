@@ -17,6 +17,75 @@
 }
 
 .logo img {
- width: 35px;
- height: 35px;
+ width: 1.5rem;
+ height: 1.5rem;
+}
+
+.logo h1 {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: var(--primary-color);
+}
+
+.menu {
+ display: flex;
+ align-items: center;
+ column-gap: 2.7rem;
+ margin-bottom: 0;
+}
+
+.nav_item {
+ color: var(--primary-color);
+ font-weight: 500;
+ cursor: pointer;
+}
+
+.nav_icons {
+ display: flex;
+ align-items: center;
+ column-gap: 1.2rem;
+}
+
+.nav_icons span i {
+ font-size: 1.4rem;
+ color: var(--primary-color);
+ cursor: pointer;
+}
+
+.cart_icon,
+.fav_icon {
+ position: relative;
+}
+
+.badge {
+ position: absolute;
+ top: 25%;
+ right: -8%;
+ width: 16px;
+ height: 16px;
+ content: "";
+ background: var(--primary-color);
+ color: #fff;
+ display: flex;
+ justify-content: center;
+ border-radius: 50px;
+ font-size: 0.7rem;
+ font-weight: 600;
+ z-index: 10;
+}
+
+.nav_icons span img {
+ width: 30px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.mobile-menu {
+ font-size: 1.3rem;
+ color: var(--primary-color);
+ display: none;
+}
+
+.nav_active {
+ font-weight: 700 !important;
 }
