@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import heroImg from '../assets/images/hero-img.png';
 import Helmet from '../Components/Helmet/Helmet';
+import ProductList from '../Components/UI/ProductList';
 import Services from '../Services/Services';
 import "../Styles/Home.css";
 
@@ -40,9 +41,10 @@ const Home = () => {
       <section className="trending_products">
         <Container>
           <Row>
-            <Col lg='12'>
+            <Col lg='12' className='text-center'>
               <h2 className='section_title'>Trending Products</h2>
             </Col>
+            <ProductList />
           </Row>
         </Container>
       </section>
