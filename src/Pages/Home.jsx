@@ -37,6 +37,15 @@ const Home = () => {
       </section>
 
       <Services />
+      <section className="trending_products">
+        <Container>
+          <Row>
+            <Col lg='12'>
+              <h2 className='section_title'>Trending Products</h2>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };
