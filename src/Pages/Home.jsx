@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import heroImg from '../assets/images/hero-img.png';
 import Helmet from '../Components/Helmet/Helmet';
+import Services from '../Services/Services';
 import "../Styles/Home.css";
+
 
 const Home = () => {
 
@@ -33,6 +35,8 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      <Services />
     </Helmet>
   );
 };
