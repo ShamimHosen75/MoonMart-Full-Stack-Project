@@ -5,10 +5,11 @@ import ProductCard from './ProductCard';
 const ProductList = ({data}) => {
   return (
     <>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+    {
+      data.map(item =>(
+        <ProductCard item={item}/>
+      ))
+    }
     </>
   );
 };
