@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 
-const ProductList = () => {
+const ProductList = ({data}) => {
   return (
     <>
       <ProductCard />
