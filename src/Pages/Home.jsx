@@ -6,6 +6,7 @@ import products from "../assets/data/products";
 import CounterImg from "../assets/images/counter-timer-img.png";
 import heroImg from '../assets/images/hero-img.png';
 import Helmet from '../Components/Helmet/Helmet';
+import Clock from '../Components/UI/Clock';
 import ProductList from '../Components/UI/ProductList';
 import Services from '../Services/Services';
 import "../Styles/Home.css";
@@ -79,7 +80,20 @@ const Home = () => {
       <section className="timer-count">
         <Container>
           <Row>
-            <Col lg='6' md='6'></Col>
+            <Col lg='6' md='6'>
+
+              <div className="clock-top-content">
+                <h4 className='text-white fs-4 mb-2'>Limited Offers</h4>
+                <h3 className='text-white fs-5 mb-3'>Quality Armchair</h3>
+              </div>
+              <Clock></Clock>
+
+              <motion.button 
+              whileTap={{scale:1.2}} 
+              className="buy-btn store-btn mt-3">
+                <Link to='/shop'>Visit Store</Link>
+              </motion.button>
+            </Col>
 
             <Col lg='6' md='6' className='text-end'>
               <img src={CounterImg} alt="" />

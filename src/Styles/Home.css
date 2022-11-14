@@ -52,3 +52,16 @@
  height: 70% !important;
  object-fit: contain;
 }
+
+.store-btn {
+ background: #fff;
+ color: var(--primary-color);
+ font-weight: 600;
+ padding: 6px;
+ border-radius: 10px;
+}
+
+.store-btn a:hover {
+ background: #fff;
+ color: var(--primary-color);
+}
