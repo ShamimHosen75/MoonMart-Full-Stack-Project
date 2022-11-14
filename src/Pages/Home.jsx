@@ -3,24 +3,30 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import products from "../assets/data/products";
+import CounterImg from "../assets/images/counter-timer-img.png";
 import heroImg from '../assets/images/hero-img.png';
 import Helmet from '../Components/Helmet/Helmet';
 import ProductList from '../Components/UI/ProductList';
 import Services from '../Services/Services';
 import "../Styles/Home.css";
 
-
 const Home = () => {
 
-  const [data, setData]= useState(products)
+  const [trendingProducts, setTrendingProducts]= useState([]);
+  const [bestSalesProducts, setBestSalesProducts]= useState([]);
+
   const year = new Date().getFullYear()
 
 
   useEffect(() =>{
-    const filteredProducts = products.filter(
+    const filteredTrendingProducts = products.filter(
       (item) => item.category === 'chair');
 
-      setData(filteredProducts);
+    const filteredBestSalesProducts = products.filter(
+      (item) => item.category === 'sofa');
+
+      setTrendingProducts(filteredTrendingProducts);
+      setBestSalesProducts(filteredBestSalesProducts);
   }, []);
 
   return (
@@ -54,7 +60,30 @@ const Home = () => {
             <Col lg='12' className='text-center'>
               <h2 className='section_title'>Trending Products</h2>
             </Col>
-            <ProductList data ={data}/>
+            <ProductList data ={trendingProducts}/>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="best_sales">
+        <Container>
+        <Row>
+            <Col lg='12' className='text-center'>
+              <h2 className='section_title'>Best Sales</h2>
+            </Col>
+            <ProductList data={bestSalesProducts} />
+          </Row>
+        </Container>
+      </section>
+
+      <section className="timer-count">
+        <Container>
+          <Row>
+            <Col lg='6' md='6'></Col>
+
+            <Col lg='6' md='6' className='text-end'>
+              <img src={CounterImg} alt="" />
+            </Col>
           </Row>
         </Container>
       </section>
