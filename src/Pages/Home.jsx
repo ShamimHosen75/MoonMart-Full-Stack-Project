@@ -101,6 +101,16 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      <section className="new-arrivals">
+        <Container>
+          <Row>
+          <Col lg='12' className='text-center'>
+              <h2 className='section_title'>New Arrivals</h2>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };
