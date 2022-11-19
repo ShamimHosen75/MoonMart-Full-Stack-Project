@@ -84,7 +84,7 @@ const Home = () => {
 
               <div className="clock-top-content">
                 <h4 className='text-white fs-4 mb-2'>Limited Offers</h4>
-                <h3 className='text-white fs-5 mb-3'>Quality Armchair</h3>
+                <h3 className='text-white fs-6 mb-3'>Quality Armchair</h3>
               </div>
               <Clock></Clock>
 
