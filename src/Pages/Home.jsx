@@ -15,8 +15,9 @@ const Home = () => {
 
   const [trendingProducts, setTrendingProducts]= useState([]);
   const [bestSalesProducts, setBestSalesProducts]= useState([]);
-  const [mobileProducts, setMobileProducts] = useState ([])
-  const [wirelessProducts, setWirelessProducts] = useState ([])
+  const [mobileProducts, setMobileProducts] = useState ([]);
+  const [wirelessProducts, setWirelessProducts] = useState ([]);
+  const [popularProducts, setPopularProducts] = useState ([]);
 
   const year = new Date().getFullYear()
 
@@ -34,10 +35,14 @@ const Home = () => {
     const filteredWirelessProducts = products.filter(
       (item) => item.category === 'wireless');
 
+    const filteredPopularProducts = products.filter(
+      (item) => item.category === 'watch');
+
       setTrendingProducts(filteredTrendingProducts);
       setBestSalesProducts(filteredBestSalesProducts);
       setMobileProducts(filteredMobileProducts);
       setWirelessProducts(filteredWirelessProducts);
+      setPopularProducts(filteredPopularProducts);
   }, []);
 
   return (
@@ -69,7 +74,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg='12' className='text-center'>
-              <h2 className='section_title'>Trending Products</h2>
+              <h2 className='section_title pb-2'>Trending Products</h2>
             </Col>
             <ProductList data ={trendingProducts}/>
           </Row>
@@ -80,7 +85,7 @@ const Home = () => {
         <Container>
         <Row>
             <Col lg='12' className='text-center'>
-              <h2 className='section_title'>Best Sales</h2>
+              <h2 className='section_title pb-2'>Best Sales</h2>
             </Col>
             <ProductList data={bestSalesProducts} />
           </Row>
@@ -116,7 +121,7 @@ const Home = () => {
         <Container>
           <Row>
           <Col lg='12' className='text-center'>
-              <h2 className='section_title'>New Arrivals</h2>
+              <h2 className='section_title pb-3'>New Arrivals</h2>
             </Col>
               <ProductList data = {mobileProducts} />
               <ProductList data = {wirelessProducts} />
@@ -128,10 +133,9 @@ const Home = () => {
       <Container>
           <Row>
           <Col lg='12' className='text-center'>
-              <h2 className='section_title'>Popular in Category</h2>
+              <h2 className='section_title pb-5'>Popular in Category</h2>
             </Col>
-              <ProductList data = {mobileProducts} />
-              <ProductList data = {wirelessProducts} />
+              <ProductList data = {popularProducts} />
           </Row>
         </Container>
       </section>
