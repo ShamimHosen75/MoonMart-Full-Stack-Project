@@ -36,6 +36,8 @@ const Home = () => {
 
       setTrendingProducts(filteredTrendingProducts);
       setBestSalesProducts(filteredBestSalesProducts);
+      setMobileProducts(filteredMobileProducts);
+      setWirelessProducts(filteredWirelessProducts);
   }, []);
 
   return (
@@ -116,8 +118,20 @@ const Home = () => {
           <Col lg='12' className='text-center'>
               <h2 className='section_title'>New Arrivals</h2>
             </Col>
+              <ProductList data = {mobileProducts} />
+              <ProductList data = {wirelessProducts} />
+          </Row>
+        </Container>
+      </section>
 
-
+      <section className="popular-category">
+      <Container>
+          <Row>
+          <Col lg='12' className='text-center'>
+              <h2 className='section_title'>Popular in Category</h2>
+            </Col>
+              <ProductList data = {mobileProducts} />
+              <ProductList data = {wirelessProducts} />
           </Row>
         </Container>
       </section>
