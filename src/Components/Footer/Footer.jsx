@@ -5,6 +5,9 @@ import logo from '../../assets/images/eco-logo.png';
 import './Footer.css';
 
 const Footer = () => {
+
+  const year = new Date().getFullYear();
+
   return (
     <footer>
       <Container>
@@ -92,6 +95,10 @@ const Footer = () => {
 
               </ListGroup>
            </div>
+          </Col>
+
+          <Col className='lg-12'>
+            <p className='footer-copyright'>Copyright {year} Developed By Shamim</p>
           </Col>
         </Row>
       </Container>
