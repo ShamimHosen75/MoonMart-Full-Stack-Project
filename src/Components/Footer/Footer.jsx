@@ -89,16 +89,15 @@ const Footer = () => {
                   <p>example12@gmail.com</p>
                 </ListGroupItem>
 
-                <ListGroupItem className='ps-0 border-0'>
-                  <Link to='#'>Smart Watch</Link>
-                </ListGroupItem>
-
               </ListGroup>
            </div>
           </Col>
-
-          <Col className='lg-12'>
-            <p className='footer-copyright'>Copyright {year} Developed By Shamim</p>
+        </Row>
+        
+        {/* Copyright Section  */}
+        <Row>
+        <Col className='lg-6 pt-5 pb-3 text-center'>
+            <p className='footer-copyright text-black'>Copyright &copy; {year} | Developed By Shamim</p>
           </Col>
         </Row>
       </Container>
